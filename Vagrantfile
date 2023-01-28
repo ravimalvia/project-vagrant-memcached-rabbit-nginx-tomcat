@@ -5,13 +5,13 @@ Vagrant.configure("2") do |config|
 
 
 #Nginx VM
-#  config.vm.define "nginx" do |nginx|
-#    nginx.vm.box= "ubuntu/trusty64[[O"
-#    nginx.vm.hostname= "nginx"
-#    nginx.vm.network "private_network", ip: "192.168.56.5"
-#    nginx.vm.provision "shell",
-#      inline: "yum install net-tools vim -y"
-#  end
+  config.vm.define "nginx" do |nginx|
+    nginx.vm.box= "ubuntu/trusty64[[O"
+    nginx.vm.hostname= "nginx"
+    nginx.vm.network "private_network", ip: "192.168.56.5"
+    nginx.vm.provision "shell",
+      inline: "yum install net-tools vim -y"
+  end
 
 #tomcat VM
   config.vm.define "tomcat" do |tomcat|
